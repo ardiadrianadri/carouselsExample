@@ -1,0 +1,13 @@
+<carousel [interval]="false" [(activeSlide)]="activeSlideIndex" (activeSlideChange)="slideChange()" >
+    <slide *ngFor="let slide of slides">
+        <div *ngIf="slide.type === 'HEADER'" >
+            <h1 class="carousel-header">{{slide.value}}</h1>
+        </div>
+        <div *ngIf="slide.type === 'IMAGE'">
+            <img src="{{slide.value}}">
+        </div>
+        <div *ngIf="slide.type === 'TEXT'">
+            <span>{{slide.value}}</span>
+        </div>
+    </slide>
+</carousel>
