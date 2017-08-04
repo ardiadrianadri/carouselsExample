@@ -4,7 +4,7 @@
             <h1 class="carousel-header">{{slide.value}}</h1>
         </div>
         <div *ngIf="slide.type === 'IMAGE'">
-            <img src="{{slide.value}}">
+            <img class="carousel-img" src="{{slide.value}}">
         </div>
         <div *ngIf="slide.type === 'TEXT'">
             <span>{{slide.value}}</span>
